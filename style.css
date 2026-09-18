@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(0deg, #4fe04a 24%, #274abc 92%);
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  margin-bottom: 120px;
+}
+
+.music-container {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 20px 20px rgba(6, 41, 198, 0.6);
+  display: flex;
+  align-items: center;
+  padding: 20px 30px;
+  position: relative;
+}
+
+.img-container {
+  width: 200px;
+  position: relative;
+}
+
+.img-container img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  bottom: 10px;
+  left: -60px;
+  animation: rotate 10s linear infinite;
+  animation-play-state: paused;
+}
+
+.music-container.play .img-container img {
+  animation-play-state: running;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.music-info {
+  background: rgba(99, 98, 98, 0.5);
+  border-radius: 15px 15px 0 0;
+  position: absolute;
+  top: 0px;
+  left: 10;
+  width: calc(100% - 40px);
+  height: 110px;
+  padding: 10px 10px 10px 150px;
+  opacity: 0;
+  transform: translateY(0%);
+  transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+  z-index: 0;
+  #title {
+  color: #ff5882;
+  font-size: 20px;
+  margin-left: 10px;
+}
+}
+
+.music-container.play .music-info {
+  opacity: 1;
+  transform: translateY(-100%);
+}
+
+.progress-container {
+  background: #ffffff;
+  height: 4px;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.progress {
+  background: #ff5882;
+  height: 100%;
+  width: 0%;
+  border-radius: 5px;
+  transition: width 0.1s linear;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.action-btn {
+  background: #fff;
+  border: none;
+  color: #ff5882;
+  font-size: 20px;
+  padding: 10px;
+  margin: 0 20px;
+  cursor: pointer;
+}
+
+.action-btn-big {
+  font-size: 30px;
+  color: #ff5882;
+}
