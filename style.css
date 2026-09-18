@@ -120,27 +120,33 @@ h1 {
 }
 .gif-overlay {
   position: absolute;
-  width: 300px;
-  height: 300px;
   object-fit: contain;
 }
 
 .gif1 {
-  top: 50px;
-  left: 50px;
+ width: 300px;
+ height: 300px;
+ top: 50px;
+ left: 50px;
 }
 
 .gif2 {
+  width: 300px;
+  height: 300px;
   top: 100px;
   right: 50px;
 }
 
 .gif3 {
-  bottom: 10px;
+  width: 300px;
+  height: 300px;
+  bottom: 0px;
   left: 50px;
 }
 
 .gif4 {
+    width: 300px;
+    height: 300px;
   bottom: 100px;
   right: 100px;
 }
