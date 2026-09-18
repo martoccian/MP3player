@@ -118,3 +118,11 @@ h1 {
   font-size: 30px;
   color: #ff5882;
 }
+.gif-overlay {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  top: 100px;
+  left: 100px;
+}
